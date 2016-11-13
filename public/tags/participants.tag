@@ -3,6 +3,9 @@
         <div>
             <h1> Participants</h1>
             <div class="flex one">
+                <input type="text" oninput={searchParticipant} name="keyword" placeholder="Find a participant..." autocomplete="off"></label>
+            </div>
+            <div class="flex one">
                 <table class="primary">
                     <thead>
                         <tr>
@@ -12,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr each={value , key in participants}>
+                        <tr each={value , key in participants.filter(filterParticipants)}>
                             <td>
                                 <img src="https://graph.facebook.com/{value.fbid}/picture?width=50&height=50"> {value.name}
                             </td>
@@ -38,7 +41,25 @@
         
     })
 
+        searchParticipant(e) {
+            this.update()
+        }
+        filterParticipants(item) {
 
+            if (this.keyword.value.length <= 0) {
+
+                return true
+
+            } else {
+                if (item.name.toLowerCase().indexOf(this.keyword.value.toLowerCase()) > -1) {
+
+                    return true
+                } else {
+                    return false
+                }
+
+            }
+        }
 
     
     </script>
