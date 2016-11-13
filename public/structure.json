@@ -1,0 +1,21 @@
+{
+    "participatns": {
+
+        "1234": {
+            "name": "bla bla"
+
+        }
+
+    },
+    "gifts": {
+        "cordholder": {
+            "quota": 500
+        },
+        "t-shirts": {
+            "quota": 20
+        },
+        "tumblr": {
+            "quota": 20
+        }
+    }
+}
