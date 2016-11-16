@@ -56,7 +56,7 @@ realtimeParticipants.orderByChild('created_at').on('value', function (snapshot) 
             participants.push(participant)
         });
     }
-    console.log(participants)
+
     obs.trigger('participants_updated', participants)
 
 })
@@ -81,7 +81,8 @@ channel.bind('like_event', function (data) {
                 profile: 'https://facebook.com/' + data.fbid,
                 gift: gift,
                 fbid: data.fbid,
-                created_at: -(n)
+                created_at: -(n),
+                is_claimed: false
             }
             database.ref('participants/' + data.fbid).set(participant);
 
@@ -102,7 +103,13 @@ channel.bind('like_event', function (data) {
 
 })
 
-
+obs.on('claim_gift', function (data) {
+    var updates = {};
+    updates['participants/' + data.fbid] = Object.assign(data, {
+        is_claimed: true
+    })
+    database.ref().update(updates)
+})
 
 
 riot.mount('*', {

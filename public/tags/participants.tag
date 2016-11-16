@@ -12,6 +12,7 @@
                             <th>Nama</th>
                             <th> Profil</th>
                             <th>Hadiah</th>
+                            <th> Diambil? </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,8 @@
                                 <span class="gift-name" if={value.gift=='t-shirts' }>1 T-Shirt Sociocaster</span>
                                 <span class="gift-name" if={value.gift=='mugs' }>1 Mug Sociocaster</span>
                             </td>
+                            <td if={!value.is_claimed}><a href="#" onclick={claimGift}> Ambil </a> </td>
+                            <td if={value.is_claimed}> Ya</td>
                         </tr>
                     </tbody>
                 </table>
@@ -59,6 +62,11 @@
                 }
 
             }
+        }
+
+        claimGift(e){
+         
+            obs.trigger('claim_gift',e.item.value)
         }
 
     
