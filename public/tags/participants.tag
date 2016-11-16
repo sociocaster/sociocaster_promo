@@ -1,29 +1,29 @@
 <participants>
     <div class="flex one">
-        <div>
-            <h1> Participants</h1>
+        <div class="participants">
+            <h2> Partisipan</h2>
             <div class="flex one">
-                <input type="text" oninput={searchParticipant} name="keyword" placeholder="Find a participant..." autocomplete="off"></label>
+                <input class="search" type="text" oninput={searchParticipant} name="keyword" placeholder="Cari Partisipan..." autocomplete="off"></label>
             </div>
             <div class="flex one">
-                <table class="primary">
+                <table class="primary ptable">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th> Profile</th>
-                            <th>Gift</th>
+                            <th>Nama</th>
+                            <th> Profil</th>
+                            <th>Hadiah</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr each={value , key in participants.filter(filterParticipants)}>
                             <td>
-                                <img src="https://graph.facebook.com/{value.fbid}/picture?width=50&height=50"> {value.name}
+                                <img class="user-img" src="https://graph.facebook.com/{value.fbid}/picture?width=50&height=50">                                <span class="name">{value.name}</span>
                             </td>
                             <td><a href="{value.profile}" target="_blank"> {value.profile}</a></td>
                             <td>
-                                <span if={value.gift=='cordholders' }> 1 Cord Holder</span>
-                                <span if={value.gift=='t-shirts' }>1 T-Shirt Sociocaster</span>
-                                <span if={value.gift=='mugs' }>1 Mug Sociocaster</span>
+                                <span class="gift-name" if={value.gift=='cordholders' }> 1 Cord Holder</span>
+                                <span class="gift-name" if={value.gift=='t-shirts' }>1 T-Shirt Sociocaster</span>
+                                <span class="gift-name" if={value.gift=='mugs' }>1 Mug Sociocaster</span>
                             </td>
                         </tr>
                     </tbody>

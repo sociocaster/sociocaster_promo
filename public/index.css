@@ -1,11 +1,99 @@
 body {
-    padding: 50px 30px 50px 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #2980b9;
+    height: 130px;
+}
+
+.header h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.gift h2,
+.participants h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.gift-box {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .content {
     text-align: center;
 }
 
-.header {
+.participants {
+    margin: 10px auto;
+    width: 90%;
+}
+
+.ptable {
+    border: solid 1px #ddd;
+}
+
+.user-img {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-content-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.main-content {
+    position: relative;
+    width: 80%;
+    margin: -40px auto 30px;
+    background: #fff;
+    padding: 25px;
+}
+
+.name,
+.gift-name {
+    color: #777;
+}
+
+.search {
+    padding: 5px 10px;
+}
+
+.separator {
+    width: 92%;
+    height: 1px;
+    background: #ddd;
+    display: block;
+    margin: 20px auto;
+}
+
+.gift-wrapper {
+    border-radius: 100%;
+    border: dashed 1px #ddd;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.gift-img {
+    max-width: 120px;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    display: block;
     text-align: center;
 }

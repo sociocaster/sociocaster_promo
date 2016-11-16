@@ -1,15 +1,24 @@
 <gifts>
     <div class="flex one">
-        <div>
-            <h1> Gifts Available</h1>
+        <div class="gift">
+            <h2>Hadiah yang tersedia</h2>
             <div class="flex three">
-                <div>
+                <div class="gift-box">
+                    <div class="gift-wrapper">
+                        <img class="gift-img" src="../ch.jpg" alt="">
+                    </div>
                     <button class="mainButton">Cord Holders <span class="label success">{gifts['cordholders']}</span></button>
                 </div>
-                <div>
+                <div class="gift-box">
+                    <div class="gift-wrapper">
+                        <img class="gift-img" src="../tshirt.jpg" alt="">
+                    </div>
                     <button class="mainButton">T-Shirts <span class="label success">{gifts['t-shirts']}</span></button>
                 </div>
-                <div>
+                <div class="gift-box">
+                    <div class="gift-wrapper">
+                        <img class="gift-img" src="../mug.jpg" alt="">
+                    </div>
                     <button class="mainButton">Mugs <span class="label success">{gifts['mugs']}</span></button>
                 </div>
             </div>
