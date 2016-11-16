@@ -2,14 +2,14 @@
     <div class="modal">
         <input id="modal_1" type="checkbox" />
         <label for="modal_1" class="overlay"></label>
-        <article>
+        <article class="modal-body">
             <header>
-                <h3>Congratulations!</h3>
+                <h3>Sociocaster Promo</h3>
                 <label for="modal_1" class="close">&times;</label>
             </header>
-            <section class="content">
-                <h1> Selamat {participant.name}! </h1>
-                <p><img class="user-img" src="https://graph.facebook.com/{participant.fbid}/picture?width=150&height=150"> </p>
+            <section class="content modal-content">
+                <h2> Selamat {participant.name}! </h2>
+                <div class="gift-wrapper"><img class="user-img" src="https://graph.facebook.com/{participant.fbid}/picture?width=150&height=150"> </div>
                 <p>kamu berhak mendapatkan</p>
                 <h3>
                     <span if={participant.gift=='cordholders' }> 1 Cord Holder</span>
